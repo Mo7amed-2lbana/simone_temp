@@ -1,0 +1,1004 @@
+/* start global  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 4000px;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* end global  */
+/* start variabl  */
+:root {
+  --main-color: #20c997;
+  --second-color: #dee3e4;
+  --main-trans: 0.4s;
+}
+
+/* end variabl  */
+/* start container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* small  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* meduim  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end container */
+
+/* start componant  */
+
+/* start main-heading  */
+.main-heading {
+  text-align: center;
+  padding: 60px 0;
+  line-height: 0;
+}
+@media (max-width: 767px) {
+  .main-heading {
+    padding: 25px 0;
+  }
+}
+
+.main-heading h1 {
+  color: #f2f4f4;
+  text-transform: uppercase;
+  font-size: 132px;
+}
+@media (max-width: 991px) {
+  .main-heading h1 {
+    font-size: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .main-heading h1 {
+    font-size: 70px;
+  }
+}
+.main-heading p {
+  font-weight: 600;
+  font-size: 35px;
+  text-transform: capitalize;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  margin-top: -0;
+}
+@media (max-width: 767px) {
+  .main-heading p {
+    font-size: 24px;
+  }
+}
+.main-heading p::after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -26px;
+  margin: auto;
+  background: var(--main-color);
+}
+@media (max-width: 767px) {
+  .main-heading p::after {
+    bottom: -18px;
+    width: 30%;
+  }
+}
+/* end main-heading  */
+
+/* end componant  */
+
+/* start header  */
+header {
+  min-height: 100vh;
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+header nav {
+  position: fixed;
+  z-index: 999;
+  /* height: 70px; */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+  }
+}
+
+header .container .logo {
+  padding: 20px 0;
+  width: 20%;
+}
+
+header .container .navbar {
+  padding: 20px 0;
+  flex: 1;
+  /* background-color: #f0f; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .container .navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  header .container .navbar ul li {
+    margin-bottom: 10px;
+  }
+}
+
+header .container .navbar ul li a {
+  color: #fff;
+  font-size: 16px;
+  padding: 20px;
+  text-decoration: none;
+  transition: var(--main-trans);
+}
+
+header .container .navbar ul li a.active,
+header .container .navbar ul li a:hover,
+header .container .navbar ul li a:focus {
+  color: var(--main-color);
+}
+@media (max-width: 767px) {
+  header .container .navbar ul li a {
+    padding: 0 10px;
+  }
+}
+
+/* End header  */
+
+/* start content header  */
+.content-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.content-header .parent {
+  text-align: center;
+  color: #fff;
+}
+
+.content-header .parent h4 {
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.content-header .parent h2 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.content-header .parent p {
+  margin-bottom: 10px;
+  color: var(--second-color);
+  font-size: 21px;
+}
+
+.content-header .parent button {
+  padding: 20px 50px;
+  background: none;
+  border: 2px solid var(--main-color);
+  border-radius: 40px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: var(--main-trans);
+  cursor: pointer;
+}
+
+.content-header .parent button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* end content header  */
+
+/* start about  */
+.about {
+  padding: 100px 0;
+}
+
+.about .parent {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .about .parent {
+    flex-direction: column;
+  }
+}
+
+.about .parent .about-text {
+  flex: 1;
+  margin-right: 5%;
+}
+@media (max-width: 767px) {
+  .about .parent .about-text {
+    width: 100%;
+  }
+}
+
+.about .parent .about-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .about .parent .about-text h2 {
+    font-size: 25px;
+  }
+}
+.about .parent .about-text h2 span {
+  color: var(--main-color);
+}
+
+.about .parent .about-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #4c4d4d;
+}
+.about .parent .about-address {
+  width: 25%;
+  padding-left: 20px;
+}
+@media (max-width: 767px) {
+  .about .parent .about-address {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.about .parent .about-address ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.about .parent .about-address ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 10px;
+}
+.about .parent .about-address ul li span {
+  font-weight: 600;
+}
+.about .parent .about-address ul li a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: var(--main-trans);
+}
+.about .parent .about-address ul li a:hover {
+  color: #148563;
+}
+.about .parent .about-address ul button {
+  margin-top: 10px;
+  font-size: 16px;
+  background: var(--main-color);
+  color: #fff;
+  padding: 20px 45px;
+  border: none;
+  border-radius: 30px;
+  transition: var(--main-trans);
+}
+.about .parent .about-address ul button:hover {
+  background-color: #148563;
+  box-shadow: 1px 1px 1px;
+  cursor: pointer;
+}
+
+.about .skills {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.about .skills div {
+  flex: 1;
+  text-align: center;
+  border-right: 1px dotted #e0dede;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .about .skills div {
+    width: 50%;
+    flex: none;
+  }
+  .about .skills div:nth-child(2) {
+    border: none;
+  }
+}
+.about .skills div:last-child {
+  border: none;
+}
+.about .skills div span {
+  font-size: 45px;
+  font-weight: 600;
+  color: #6c757d;
+}
+.about .skills div p {
+  padding-bottom: 20px;
+  font-size: 16px;
+  color: #4c4d4d;
+}
+/* end about  */
+
+/* start what I Do  */
+.what-i-do {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.what-i-do .parent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .what-i-do .parent {
+    flex-direction: column;
+  }
+}
+
+.what-i-do .parent .child {
+  flex: 1;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .what-i-do .parent .child {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.what-i-do .parent .child > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .what-i-do .parent .child > div {
+    margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.what-i-do .parent .child > div svg {
+  background-color: #fff;
+  color: var(--main-color);
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  .what-i-do .parent .child > div svg {
+    width: fit-content;
+    margin: 0 auto 20px;
+  }
+}
+.what-i-do .parent .child > div .text {
+  margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+  .what-i-do .parent .child > div .text {
+    margin: 0;
+  }
+}
+.what-i-do .parent .child > div h3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.what-i-do .parent .child > div p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+/* End what I Do  */
+
+/* start resume  */
+.resume {
+  padding: 60px 0;
+}
+
+.resume .parent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+@media(max-width:767px){
+    .resume .parent {
+        flex-direction: column;
+    }
+}
+
+.resume .parent .child {
+    flex: 1;
+}
+.resume .parent .child:first-child {
+    margin-right: 40px;
+}
+@media(max-width:767px){
+    .resume .parent .child:first-child{
+        margin-right: 0;
+    }
+}
+.resume .parent .child > h3{
+    font-size: 22px ;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+@media(max-width:767px){
+    .resume .parent .child > h3 {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+.resume .parent .child .text > div {
+  padding: 20px;
+  border: 1px solid var(--second-color);
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+@media(max-width:767px){
+    .resume .parent .child .text >div{
+        padding: 10px;
+    }
+}
+
+.resume .parent .child .text > div span {
+    width: fit-content;
+    background: var(--main-color);
+    color: #fff;
+    padding: 3px;
+    border-radius: 5px;
+}
+.resume .parent .child .text > div h3 {
+    font-weight: 450;
+    font-size: 19px;
+    margin-top: 15px;
+}
+.resume .parent .child .text > div p:first-of-type {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #DC3545;
+}
+.resume .parent .child .text > div p:last-of-type {
+    color: #4c4d4d;
+    line-height: 1.8;
+}
+
+.resume .skl{
+    font-weight: 450;
+    font-size: 24px;
+}
+@media(max-width:767px){
+    .resume .skl{
+        text-align: center;
+    }
+}
+.resume .resume-skills{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:767px){
+    .resume .resume-skills{
+        flex-direction: column;
+    }
+}
+.resume .resume-skills .resume-child{
+    flex: 1;
+}
+.resume .resume-skills .resume-child:first-child{
+    margin-right: 30px;
+}
+@media(max-width:767px){
+    .resume .resume-skills .resume-child:first-child{
+        margin-right: 0;
+    }
+}
+.resume .resume-skills .resume-child div{
+    margin: 20px 0
+}
+.resume .resume-skills .resume-child div .txt{
+    display: flex;
+    justify-content: space-between;
+}
+.resume .resume-skills .resume-child div .progress{
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    position: relative;
+}
+.resume .resume-skills .resume-child div .progress::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 8px 0 0 8px;
+}
+.resume .resume-skills .resume-child.first div:first-child .progress::after{
+    width: 65%;
+}
+
+.resume .resume-skills .resume-child.first div:nth-child(2) .progress::after{
+    width: 95%;
+}
+.resume .resume-skills .resume-child.first div:last-child .progress::after{
+    width: 80%;
+}
+.resume .resume-skills .resume-child.second div:first-child .progress::after{
+    width: 70%;
+}
+.resume .resume-skills .resume-child.second div:nth-child(2) .progress::after{
+    width: 60%;
+}
+.resume .resume-skills .resume-child.second div:last-child .progress::after{
+    width: 99%;
+}
+.resume .btn{
+    width: fit-content;
+    margin: 50px auto;
+}
+@media(max-width:767px){
+    .resume .btn{
+        margin-top: 30px;
+    }
+}
+.resume button{
+    width: 200px;
+    padding: 15px 0;
+    background: none;
+    border: 2px solid #6C757D;
+    border-radius: 30px;
+    transition: var(--main-trans);
+    color:#6C757D ;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.resume button:hover{
+    background-color: #6C757D ;
+    color: #fff;
+}
+/* end resume  */
+
+/* start portfolio  */
+.portfolio{
+  padding:100px 0;
+  background-color: #F8F9FA;
+}
+
+.portfolio .links {
+  width: 500px ;
+  margin:70px auto;
+}
+
+@media(max-width:767px){
+  .portfolio .links {
+    max-width: 100%;
+  }
+}
+
+.portfolio .links ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.portfolio .links ul li{
+  transition: var(--main-trans);
+  padding: 20px 10px;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-size: 18px;
+  color:#7b8084;
+}
+
+
+.portfolio .links ul li:hover,
+.portfolio .links ul li.active{
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+.portfolio .parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width:767px){
+  .portfolio .parent{
+    flex-direction: column;
+  }
+}
+
+.portfolio .parent .child{
+  flex: 1;
+  margin-right: 20px;
+}
+@media(max-width:767px){
+  .portfolio .parent .child{
+    flex: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.portfolio .parent .child div{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+
+.portfolio .parent .child div::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 98%;
+  background-color:#000;
+  opacity: 0;
+  border-radius: 7px;
+  transition: .8s;
+  cursor: pointer;
+}
+
+.portfolio .parent .child div img{
+  max-width: 100%;
+  border-radius: 7px;
+  transition: .8s;
+}
+
+.portfolio .parent .child div:hover::after{
+  opacity: .5;
+}
+
+.portfolio .parent .child div:hover img{
+  filter: blur(1px);
+}
+/* end portfolio  */
+
+/* start testimonial */
+.testimonial{
+  padding: 100px 0;
+}
+.testimonial .parent{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+@media(max-width:767px){
+  .testimonial .parent{
+    flex-direction: column;
+  }
+}
+
+.testimonial .parent .child{
+  flex: 1;
+  padding: 60px;
+  margin-right: 20px;
+  background-color: #F8F9FA;
+  border-radius: 7px;
+}
+@media(max-width:767px){
+  .testimonial .parent .child{
+    padding: 60px 0 60px 20px;
+    margin-right: 0
+  }
+}
+
+.testimonial .parent .child .top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+.testimonial .parent .child .top img{
+  border-radius: 50%;
+}
+.testimonial .parent .child .top .txt{
+  margin-left: 10px;
+}
+.testimonial .parent .child .top .txt p:last-child{
+  color: #7b8084;
+  font-weight: 450;
+}
+.testimonial .parent .child .icons{
+  margin-top: 15px;
+}
+
+.testimonial .parent .child .icons svg{
+  color: #FFC107;
+}
+
+.testimonial .progress{
+  width: 100px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+.testimonial .progress span{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bdbdbd;
+  display: block;
+  margin-right: 7px;
+  cursor: pointer;
+  transition: var(--main-trans);
+  outline: 1px solid transparent;
+  border: 5px solid transparent;
+}
+
+.testimonial .progress span.active,
+.testimonial .progress span:hover{
+  background-color: var(--main-color);
+  outline: 1px solid var(--main-color);
+  border: 3px solid #fff;
+}
+/* end testimonial */
+
+/* start contact  */
+.contact{
+  padding: 100px 0;
+  background-color: #F8F9FA;
+}
+
+.contact .parent {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+@media(max-width:767px){
+  .contact .parent{
+    flex-direction: column;
+  }
+}
+
+.contact .parent .address{
+  width: 190px;
+}
+@media(max-width:767px){
+  .contact .parent .address{
+    width: 100%;
+  }
+}
+
+.contact .parent .address h3{
+  margin-bottom: 20px;
+  font-weight: 450;
+}
+.contact .parent .address p{
+  margin-bottom: 20px;
+  color: #4d555a;
+}
+.contact .parent .address .links{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contact .parent .address .links svg{
+  color: var(--main-color);
+  margin-right: 10px;
+}
+.contact .parent .address .links p{
+  margin-bottom: 0;
+}
+.contact .parent .address h3:last-of-type{
+  margin: 15px 0;
+}
+.contact .parent .address .icons svg{
+  color: #4d555a;
+  margin-right: 10px;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.contact .parent .form{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+::placeholder{
+  color: #656565;
+  padding: 15px;
+}
+.contact .parent .form form input{
+  font-size: 16px;
+  padding: 15px 0;
+  border-radius: 8px;
+  border:1px solid#dae1e3;
+  outline: none;
+  margin: 20px 0;
+}
+.contact .parent .form form h3{
+  font-weight: 450;
+  margin-bottom: 10px;
+}
+.contact .parent .form form input:focus,
+.contact .parent .form form textarea:focus
+{
+  border-color: #86b7fe;
+  box-shadow: 0px 0px 3px 0px #86b6fe9d;
+}
+.contact .parent .form form input:first-of-type{
+  width: calc(100% / 2 - 15px);
+  margin-right: 25px
+} 
+@media(max-width:767px){
+  .contact .parent .form form input:first-of-type{
+    width: 100%;
+    margin: 0;
+  }
+}
+.contact .parent .form form input:last-of-type{
+  width: calc(100% / 2 - 15px);
+}
+@media(max-width:767px){
+  .contact .parent .form form input:last-of-type{
+    width: 100%;
+  }
+}
+
+
+.contact .parent .form form textarea{
+  width: 100%;
+  border:1px solid#dae1e3;
+  outline: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.contact .parent .form .btn{
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.contact .parent .form .btn button{
+  padding: 20px 60px;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--main-trans);
+}
+
+.contact .parent .form .btn button:hover{
+  background-color: #1a8968;
+}
+/* end contact  */
+
+/* start footer */
+footer{
+  padding: 40px 0;
+}
+footer .parent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media(max-width:767px){
+  footer .parent{
+    flex-direction: column;
+  }
+}
+footer .parent p{
+  margin-bottom: 10px;
+}
+footer .parent p span{
+  color: var(--main-color);
+  font-weight: 500;
+}
+footer .parent div{
+  position: relative;
+}
+footer .parent div::after{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 70%;
+  background-color: #b9b9b9;
+  left: 56%;
+  top: 20%;
+}
+footer .parent div span {
+  cursor: pointer;
+  transition: var(--main-trans);
+}
+
+footer .parent div span:first-of-type{
+  margin-right: 35px;
+}
+
+footer .parent div span:hover{
+  color: var(--main-color);
+}
+
+/* end footer */
